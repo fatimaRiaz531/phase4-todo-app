@@ -1,0 +1,47 @@
+=======================================================================
+  TODO APP - Cloud-Native Todo Chatbot
+  Release: {{ .Release.Name }}
+  Namespace: {{ .Release.Namespace }}
+=======================================================================
+
+  Thank you for installing {{ .Chart.Name }}!
+
+  Backend Service:
+    Name: {{ .Values.backend.name }}
+    Port: {{ .Values.backend.service.port }}
+    Type: {{ .Values.backend.service.type }}
+
+  Frontend Service:
+    Name: {{ .Values.frontend.name }}
+    Port: {{ .Values.frontend.service.port }}
+    {{- if eq .Values.frontend.service.type "NodePort" }}
+    NodePort: {{ .Values.frontend.service.nodePort }}
+    Access URL: http://$(minikube ip):{{ .Values.frontend.service.nodePort }}
+    {{- end }}
+
+  To access your application:
+
+  1. Get the application URL by running these commands:
+  {{- if eq .Values.frontend.service.type "NodePort" }}
+     export NODE_PORT=$(kubectl get --namespace {{ .Release.Namespace }} \
+       -o jsonpath="{.spec.ports[0].nodePort}" services {{ .Values.frontend.name }})
+     export NODE_IP=$(kubectl get nodes --namespace {{ .Release.Namespace }} \
+       -o jsonpath="{.items[0].status.addresses[0].address}")
+     echo http://$NODE_IP:$NODE_PORT
+  {{- else if eq .Values.frontend.service.type "LoadBalancer" }}
+     NOTE: It may take a few minutes for the LoadBalancer IP to be available.
+     You can watch the status by running:
+       kubectl get --namespace {{ .Release.Namespace }} svc -w {{ .Values.frontend.name }}
+  {{- end }}
+
+  2. For Minikube, you can also run:
+     minikube service {{ .Values.frontend.name }} --namespace {{ .Release.Namespace }}
+
+  3. To scale the backend:
+     kubectl scale deployment {{ .Values.backend.name }} \
+       --replicas=3 --namespace {{ .Release.Namespace }}
+
+  4. To check pod status:
+     kubectl get pods --namespace {{ .Release.Namespace }}
+
+=======================================================================

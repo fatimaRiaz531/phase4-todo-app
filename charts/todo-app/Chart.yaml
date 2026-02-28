@@ -1,0 +1,18 @@
+apiVersion: v2
+name: todo-app
+description: Cloud-Native Todo Chatbot - Helm Chart for Kubernetes (Minikube)
+type: application
+version: 0.1.0
+appVersion: "4.0.0"
+keywords:
+  - todo
+  - chatbot
+  - fastapi
+  - nextjs
+  - cloud-native
+maintainers:
+  - name: AI Agent
+    email: ai@todo-app.local
+home: https://github.com/todo-app
+sources:
+  - https://github.com/todo-app
