@@ -2613,3 +2613,125 @@ openai.NotFoundError: Error code: 404 - {'error': {'message': 'No endpoints foun
 [2026-03-01 11:51:35] DEBUG MIDDLEWARE: Request GET /api/v1/tasks
 [2026-03-01 11:51:35] DEBUG MIDDLEWARE: Protected path /api/v1/tasks
 [2026-03-01 11:51:35] DEBUG AUTH: No token provided, falling back to demo mode
+[2026-03-01 11:54:08] DEBUG MIDDLEWARE: Request GET /docs
+[2026-03-01 11:54:08] DEBUG MIDDLEWARE: Skipping auth for /docs
+[2026-03-01 11:54:19] DEBUG MIDDLEWARE: Request POST /api/v1/chat
+[2026-03-01 11:54:19] DEBUG MIDDLEWARE: Protected path /api/v1/chat
+[2026-03-01 11:54:19] DEBUG AUTH: No token provided, falling back to demo mode
+[2026-03-01 11:54:22] DEBUG CHAT: Running agent for user user_test_123 with history len 13
+[2026-03-01 11:54:22] DEBUG AGENT: Sending request to OpenAI (Turn 1)
+[2026-03-01 11:54:28] DEBUG AGENT: Received response from OpenAI
+[2026-03-01 11:54:28] DEBUG CHAT: Agent finished successfully
+[2026-03-01 11:57:04] DEBUG MIDDLEWARE: Request GET /
+[2026-03-01 11:57:04] DEBUG MIDDLEWARE: Protected path /
+[2026-03-01 12:00:09] DEBUG MIDDLEWARE: Request GET /docs
+[2026-03-01 12:00:09] DEBUG MIDDLEWARE: Skipping auth for /docs
+[2026-03-01 12:00:33] DEBUG MIDDLEWARE: Request POST /api/v1/chat
+[2026-03-01 12:00:33] DEBUG MIDDLEWARE: Protected path /api/v1/chat
+[2026-03-01 12:00:33] DEBUG AUTH: No token provided, falling back to demo mode
+[2026-03-01 12:01:16] DEBUG CHAT: Running agent for user user_test_123 with history len 15
+[2026-03-01 12:01:16] DEBUG AGENT: Sending request to OpenAI (Turn 1)
+[2026-03-01 12:01:19] DEBUG AGENT: Received response from OpenAI
+[2026-03-01 12:01:19] DEBUG CHAT: Agent finished successfully
+[2026-03-01 12:01:36] DEBUG MIDDLEWARE: Request GET /api/v1
+[2026-03-01 12:01:36] DEBUG MIDDLEWARE: Protected path /api/v1
+[2026-03-01 12:01:52] DEBUG MIDDLEWARE: Request GET /api/v1/tasks
+[2026-03-01 12:01:52] DEBUG MIDDLEWARE: Protected path /api/v1/tasks
+[2026-03-01 12:01:52] DEBUG AUTH: No token provided, falling back to demo mode
+[2026-03-01 12:01:57] DEBUG MIDDLEWARE: Request GET /health
+[2026-03-01 12:01:57] DEBUG MIDDLEWARE: Skipping auth for /health
+[2026-03-01 12:02:37] DEBUG MIDDLEWARE: Request GET /docs
+[2026-03-01 12:02:37] DEBUG MIDDLEWARE: Skipping auth for /docs
+[2026-03-01 12:05:14] DEBUG MIDDLEWARE: Request GET /api/v1/tasks
+[2026-03-01 12:05:14] DEBUG MIDDLEWARE: Protected path /api/v1/tasks
+[2026-03-01 12:05:14] DEBUG AUTH: Received token credentials: eyJhbGciOi...
+[2026-03-01 12:05:14] DEBUG AUTH: Successfully decoded claims using get_unverified_claims
+[2026-03-01 12:05:14] DEBUG AUTH: Decoded token for user_id: user_39NyvTMSW5d1Yeo98ks5shJbNvH
+[2026-03-01 12:05:16] DEBUG AUTH: Database lookup for user_39NyvTMSW5d1Yeo98ks5shJbNvH: Found
+[2026-03-01 12:05:17] DEBUG MIDDLEWARE: Request GET /api/v1/tasks
+[2026-03-01 12:05:17] DEBUG MIDDLEWARE: Protected path /api/v1/tasks
+[2026-03-01 12:05:17] DEBUG AUTH: Received token credentials: eyJhbGciOi...
+[2026-03-01 12:05:17] DEBUG AUTH: Successfully decoded claims using get_unverified_claims
+[2026-03-01 12:05:17] DEBUG AUTH: Decoded token for user_id: user_39NyvTMSW5d1Yeo98ks5shJbNvH
+[2026-03-01 12:05:17] DEBUG MIDDLEWARE: Request GET /api/v1/users/me/tasks/stats
+[2026-03-01 12:05:17] DEBUG MIDDLEWARE: Protected path /api/v1/users/me/tasks/stats
+[2026-03-01 12:05:17] DEBUG AUTH: Received token credentials: eyJhbGciOi...
+[2026-03-01 12:05:17] DEBUG AUTH: Successfully decoded claims using get_unverified_claims
+[2026-03-01 12:05:17] DEBUG AUTH: Decoded token for user_id: user_39NyvTMSW5d1Yeo98ks5shJbNvH
+[2026-03-01 12:05:21] DEBUG AUTH: Database lookup for user_39NyvTMSW5d1Yeo98ks5shJbNvH: Found
+[2026-03-01 12:05:22] DEBUG AUTH: Database lookup for user_39NyvTMSW5d1Yeo98ks5shJbNvH: Found
+[2026-03-01 12:05:25] DEBUG MIDDLEWARE: Request GET /api/v1/users/me/tasks/stats
+[2026-03-01 12:05:25] DEBUG MIDDLEWARE: Protected path /api/v1/users/me/tasks/stats
+[2026-03-01 12:05:25] DEBUG AUTH: Received token credentials: eyJhbGciOi...
+[2026-03-01 12:05:25] DEBUG AUTH: Successfully decoded claims using get_unverified_claims
+[2026-03-01 12:05:25] DEBUG AUTH: Decoded token for user_id: user_39NyvTMSW5d1Yeo98ks5shJbNvH
+[2026-03-01 12:05:27] DEBUG AUTH: Database lookup for user_39NyvTMSW5d1Yeo98ks5shJbNvH: Found
+[2026-03-01 12:05:35] DEBUG MIDDLEWARE: Request POST /api/v1/chat
+[2026-03-01 12:05:35] DEBUG MIDDLEWARE: Protected path /api/v1/chat
+[2026-03-01 12:05:35] DEBUG AUTH: Received token credentials: eyJhbGciOi...
+[2026-03-01 12:05:35] DEBUG AUTH: Successfully decoded claims using get_unverified_claims
+[2026-03-01 12:05:35] DEBUG AUTH: Decoded token for user_id: user_39NyvTMSW5d1Yeo98ks5shJbNvH
+[2026-03-01 12:05:37] DEBUG AUTH: Database lookup for user_39NyvTMSW5d1Yeo98ks5shJbNvH: Found
+[2026-03-01 12:05:38] DEBUG CHAT: Running agent for user user_39NyvTMSW5d1Yeo98ks5shJbNvH with history len 13
+[2026-03-01 12:05:38] DEBUG AGENT: Sending request to OpenAI (Turn 1)
+[2026-03-01 12:05:42] DEBUG AGENT: Received response from OpenAI
+[2026-03-01 12:05:42] DEBUG CHAT: Agent finished successfully
+[2026-03-01 12:07:38] DEBUG MIDDLEWARE: Request GET /api/v1/tasks
+[2026-03-01 12:07:38] DEBUG MIDDLEWARE: Protected path /api/v1/tasks
+[2026-03-01 12:07:38] DEBUG AUTH: Received token credentials: eyJhbGciOi...
+[2026-03-01 12:07:38] DEBUG AUTH: Successfully decoded claims using get_unverified_claims
+[2026-03-01 12:07:38] DEBUG AUTH: Decoded token for user_id: user_39NyvTMSW5d1Yeo98ks5shJbNvH
+[2026-03-01 12:07:41] DEBUG AUTH: Database lookup for user_39NyvTMSW5d1Yeo98ks5shJbNvH: Found
+[2026-03-01 12:07:43] DEBUG MIDDLEWARE: Request GET /api/v1/tasks
+[2026-03-01 12:07:43] DEBUG MIDDLEWARE: Protected path /api/v1/tasks
+[2026-03-01 12:07:43] DEBUG AUTH: Received token credentials: eyJhbGciOi...
+[2026-03-01 12:07:43] DEBUG AUTH: Successfully decoded claims using get_unverified_claims
+[2026-03-01 12:07:43] DEBUG AUTH: Decoded token for user_id: user_39NyvTMSW5d1Yeo98ks5shJbNvH
+[2026-03-01 12:07:43] DEBUG MIDDLEWARE: Request GET /api/v1/users/me/tasks/stats
+[2026-03-01 12:07:43] DEBUG MIDDLEWARE: Protected path /api/v1/users/me/tasks/stats
+[2026-03-01 12:07:43] DEBUG AUTH: Received token credentials: eyJhbGciOi...
+[2026-03-01 12:07:43] DEBUG AUTH: Successfully decoded claims using get_unverified_claims
+[2026-03-01 12:07:43] DEBUG AUTH: Decoded token for user_id: user_39NyvTMSW5d1Yeo98ks5shJbNvH
+[2026-03-01 12:07:45] DEBUG AUTH: Database lookup for user_39NyvTMSW5d1Yeo98ks5shJbNvH: Found
+[2026-03-01 12:07:46] DEBUG AUTH: Database lookup for user_39NyvTMSW5d1Yeo98ks5shJbNvH: Found
+[2026-03-01 12:07:49] DEBUG MIDDLEWARE: Request GET /api/v1/users/me/tasks/stats
+[2026-03-01 12:07:49] DEBUG MIDDLEWARE: Protected path /api/v1/users/me/tasks/stats
+[2026-03-01 12:07:49] DEBUG AUTH: Received token credentials: eyJhbGciOi...
+[2026-03-01 12:07:49] DEBUG AUTH: Successfully decoded claims using get_unverified_claims
+[2026-03-01 12:07:49] DEBUG AUTH: Decoded token for user_id: user_39NyvTMSW5d1Yeo98ks5shJbNvH
+[2026-03-01 12:07:51] DEBUG AUTH: Database lookup for user_39NyvTMSW5d1Yeo98ks5shJbNvH: Found
+[2026-03-01 12:08:00] DEBUG MIDDLEWARE: Request POST /api/v1/tasks
+[2026-03-01 12:08:00] DEBUG MIDDLEWARE: Protected path /api/v1/tasks
+[2026-03-01 12:08:00] DEBUG AUTH: Received token credentials: eyJhbGciOi...
+[2026-03-01 12:08:00] DEBUG AUTH: Successfully decoded claims using get_unverified_claims
+[2026-03-01 12:08:00] DEBUG AUTH: Decoded token for user_id: user_39NyvTMSW5d1Yeo98ks5shJbNvH
+[2026-03-01 12:08:02] DEBUG AUTH: Database lookup for user_39NyvTMSW5d1Yeo98ks5shJbNvH: Found
+[2026-03-01 12:08:08] DEBUG MIDDLEWARE: Request PATCH /api/v1/tasks/313e744f-aca7-4ef0-b8d1-a631f89a08d6
+[2026-03-01 12:08:08] DEBUG MIDDLEWARE: Protected path /api/v1/tasks/313e744f-aca7-4ef0-b8d1-a631f89a08d6
+[2026-03-01 12:08:08] DEBUG AUTH: Received token credentials: eyJhbGciOi...
+[2026-03-01 12:08:08] DEBUG AUTH: Successfully decoded claims using get_unverified_claims
+[2026-03-01 12:08:08] DEBUG AUTH: Decoded token for user_id: user_39NyvTMSW5d1Yeo98ks5shJbNvH
+[2026-03-01 12:08:10] DEBUG AUTH: Database lookup for user_39NyvTMSW5d1Yeo98ks5shJbNvH: Found
+[2026-03-01 12:08:15] DEBUG MIDDLEWARE: Request PATCH /api/v1/tasks/313e744f-aca7-4ef0-b8d1-a631f89a08d6
+[2026-03-01 12:08:15] DEBUG MIDDLEWARE: Protected path /api/v1/tasks/313e744f-aca7-4ef0-b8d1-a631f89a08d6
+[2026-03-01 12:08:15] DEBUG AUTH: Received token credentials: eyJhbGciOi...
+[2026-03-01 12:08:15] DEBUG AUTH: Successfully decoded claims using get_unverified_claims
+[2026-03-01 12:08:15] DEBUG AUTH: Decoded token for user_id: user_39NyvTMSW5d1Yeo98ks5shJbNvH
+[2026-03-01 12:08:17] DEBUG AUTH: Database lookup for user_39NyvTMSW5d1Yeo98ks5shJbNvH: Found
+[2026-03-01 12:08:18] DEBUG MIDDLEWARE: Request POST /api/v1/chat
+[2026-03-01 12:08:18] DEBUG MIDDLEWARE: Protected path /api/v1/chat
+[2026-03-01 12:08:18] DEBUG AUTH: Received token credentials: eyJhbGciOi...
+[2026-03-01 12:08:18] DEBUG AUTH: Successfully decoded claims using get_unverified_claims
+[2026-03-01 12:08:18] DEBUG AUTH: Decoded token for user_id: user_39NyvTMSW5d1Yeo98ks5shJbNvH
+[2026-03-01 12:08:20] DEBUG AUTH: Database lookup for user_39NyvTMSW5d1Yeo98ks5shJbNvH: Found
+[2026-03-01 12:08:22] DEBUG CHAT: Running agent for user user_39NyvTMSW5d1Yeo98ks5shJbNvH with history len 15
+[2026-03-01 12:08:22] DEBUG AGENT: Sending request to OpenAI (Turn 1)
+[2026-03-01 12:08:27] DEBUG AGENT: Received response from OpenAI
+[2026-03-01 12:08:27] DEBUG CHAT: Agent finished successfully
+[2026-03-01 12:08:35] DEBUG MIDDLEWARE: Request DELETE /api/v1/tasks/313e744f-aca7-4ef0-b8d1-a631f89a08d6
+[2026-03-01 12:08:35] DEBUG MIDDLEWARE: Protected path /api/v1/tasks/313e744f-aca7-4ef0-b8d1-a631f89a08d6
+[2026-03-01 12:08:35] DEBUG AUTH: Received token credentials: eyJhbGciOi...
+[2026-03-01 12:08:35] DEBUG AUTH: Successfully decoded claims using get_unverified_claims
+[2026-03-01 12:08:35] DEBUG AUTH: Decoded token for user_id: user_39NyvTMSW5d1Yeo98ks5shJbNvH
+[2026-03-01 12:08:37] DEBUG AUTH: Database lookup for user_39NyvTMSW5d1Yeo98ks5shJbNvH: Found
+[2026-03-01 12:08:37] DEBUG TASK: DELETE /tasks/313e744f-aca7-4ef0-b8d1-a631f89a08d6 for user user_39NyvTMSW5d1Yeo98ks5shJbNvH

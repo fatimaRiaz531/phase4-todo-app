@@ -5,8 +5,8 @@ import { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Send, Bot, User, Loader2, Sparkles } from 'lucide-react';
-import { useAuth } from '@clerk/nextjs';
+import { Send, Bot, User, Loader2, Sparkles, LogIn } from 'lucide-react';
+import { useAuth, SignInButton, SignUpButton } from '@clerk/nextjs';
 import { useClerkApi } from '@/lib/api/clerk-client';
 
 // Define message type
@@ -23,6 +23,7 @@ export function ChatBot() {
     const [input, setInput] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
+    const { isSignedIn, isLoaded } = useAuth();
     const apiClient = useClerkApi();
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -35,6 +36,19 @@ export function ChatBot() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!input.trim() || isLoading) return;
+
+        if (!isSignedIn) {
+            setMessages((prev) => [
+                ...prev,
+                {
+                    id: (Date.now()).toString(),
+                    role: 'assistant',
+                    content: 'Please sign in to chat with me. Click the "Log In" button in the navigation bar.',
+                },
+            ]);
+            setInput('');
+            return;
+        }
 
         const userMessage: Message = {
             id: Date.now().toString(),

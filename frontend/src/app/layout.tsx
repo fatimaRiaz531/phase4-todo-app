@@ -34,7 +34,7 @@ export default function RootLayout({
       }}
     >
       <html lang="en" suppressHydrationWarning>
-        <body className="font-sans antialiased">
+        <body className="font-sans antialiased" suppressHydrationWarning>
           <AuthProvider>
             <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
               <div className="min-h-screen">
