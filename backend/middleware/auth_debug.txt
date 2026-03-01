@@ -2582,3 +2582,34 @@ openai.NotFoundError: Error code: 404 - {'error': {'message': 'No endpoints foun
 [2026-02-20 15:55:14] DEBUG AGENT: Sending request to OpenAI (Turn 1)
 [2026-02-20 15:55:23] DEBUG AGENT: Received response from OpenAI
 [2026-02-20 15:55:23] DEBUG CHAT: Agent finished successfully
+[2026-03-01 11:31:05] DEBUG AUTH: Middleware initialized/reloaded
+[2026-03-01 11:31:09] DEBUG AGENT: Loaded API Key prefix: sk-or-v...
+[2026-03-01 11:31:09] DEBUG AGENT: Using Base URL: https://openrouter.ai/api/v1
+[2026-03-01 11:31:10] DEBUG AUTH: main.py loaded
+[2026-03-01 11:31:13] DEBUG AUTH: Middleware initialized/reloaded
+[2026-03-01 11:31:15] DEBUG AGENT: Loaded API Key prefix: sk-or-v...
+[2026-03-01 11:31:15] DEBUG AGENT: Using Base URL: https://openrouter.ai/api/v1
+[2026-03-01 11:31:16] DEBUG AUTH: main.py loaded
+[2026-03-01 11:31:16] DEBUG AUTH: main.py loaded
+[2026-03-01 11:31:56] DEBUG MIDDLEWARE: Request GET /
+[2026-03-01 11:31:56] DEBUG MIDDLEWARE: Protected path /
+[2026-03-01 11:35:22] DEBUG MIDDLEWARE: Request GET /api/v1/tasks
+[2026-03-01 11:35:22] DEBUG MIDDLEWARE: Protected path /api/v1/tasks
+[2026-03-01 11:35:22] DEBUG AUTH: No token provided, falling back to demo mode
+[2026-03-01 11:39:32] DEBUG MIDDLEWARE: Request GET /docs
+[2026-03-01 11:39:32] DEBUG MIDDLEWARE: Skipping auth for /docs
+[2026-03-01 11:39:33] DEBUG MIDDLEWARE: Request GET /favicon.ico
+[2026-03-01 11:39:33] DEBUG MIDDLEWARE: Protected path /favicon.ico
+[2026-03-01 11:49:53] DEBUG AUTH: Middleware initialized/reloaded
+[2026-03-01 11:49:55] DEBUG AGENT: Loaded API Key prefix: sk-or-v...
+[2026-03-01 11:49:55] DEBUG AGENT: Using Base URL: https://openrouter.ai/api/v1
+[2026-03-01 11:49:56] DEBUG AUTH: main.py loaded
+[2026-03-01 11:50:03] DEBUG MIDDLEWARE: Request GET /
+[2026-03-01 11:50:03] DEBUG MIDDLEWARE: Protected path /
+[2026-03-01 11:50:36] DEBUG MIDDLEWARE: Request POST /chat
+[2026-03-01 11:50:36] DEBUG MIDDLEWARE: Protected path /chat
+[2026-03-01 11:51:23] DEBUG MIDDLEWARE: Request GET /health
+[2026-03-01 11:51:23] DEBUG MIDDLEWARE: Skipping auth for /health
+[2026-03-01 11:51:35] DEBUG MIDDLEWARE: Request GET /api/v1/tasks
+[2026-03-01 11:51:35] DEBUG MIDDLEWARE: Protected path /api/v1/tasks
+[2026-03-01 11:51:35] DEBUG AUTH: No token provided, falling back to demo mode
