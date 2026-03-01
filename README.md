@@ -10,6 +10,51 @@ A high-performance command center for developers managing complex task ecosystem
 - **Professional Aesthetics**: Sleek Dark/Light mode support with Teal & Cyan accents.
 - **Cloud Scale**: Serverless PostgreSQL (Neon) for persistent storage.
 
+---
+
+## 📋 Phase IV — Kubernetes Deployment (Spec-Driven)
+
+> **Status:** Helm charts complete, deployment pending WSL2 cgroup fix
+
+### What's Ready
+
+| Component | Status | Location |
+|-----------|--------|----------|
+| Spec Document | ✅ Complete | `docs/phase4-specs.md` |
+| Helm Chart | ✅ Complete | `charts/todo-app/` |
+| Dockerfiles | ✅ Complete | `Dockerfile.frontend`, `Dockerfile.backend` |
+| GitHub Repo | ✅ Pushed | https://github.com/fatimaRiaz531/phase4-todo-app |
+
+### Deployment Commands (When Kubernetes is Available)
+
+```bash
+# Start Kubernetes (Docker Desktop or Minikube)
+docker desktop kubernetes enable
+# OR: minikube start
+
+# Build images
+docker build -f Dockerfile.frontend -t todo-frontend:latest .
+docker build -f Dockerfile.backend -t todo-backend:latest .
+
+# Deploy via Helm
+helm install todo-app ./charts/todo-app --namespace todo --create-namespace
+
+# Verify
+kubectl get pods -n todo
+kubectl get svc -n todo
+
+# Access frontend
+kubectl port-forward svc/todo-frontend 3000:3000 -n todo
+```
+
+### Known Issue
+
+**WSL2 Cgroup Compatibility:** Docker Desktop Kubernetes fails to start on some Windows systems due to cgroup v1/v2 incompatibility. This is an environment limitation, not a code issue.
+
+**Workaround:** Use Minikube standalone or deploy to a cloud Kubernetes service (GKE, EKS, AKS).
+
+---
+
 ## 🛠️ Setup Instructions
 
 ### 1. Prerequisites
